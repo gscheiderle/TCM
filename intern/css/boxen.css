@@ -1,0 +1,121 @@
+<style type="text/css">   
+.hintergrund {
+width: 100%;
+height: 2000px;
+background-color: ;
+       position: fixed;
+       margin-left: 0px;
+       margin-top: 0px;
+       z-index: -1;
+       border: 0px  solid #4A4A4A;
+       border-radius: 0px 0px 0px 0px;
+       padding: 0px;
+       box-shadow: 0px 0px 0px #E8E8E8;}
+       
+       
+       
+.box_menue {
+width: 1px;
+height: 1px;
+background-color: ;
+name: test;
+opacity: 1;
+       position: relativ;
+       margin-left: -10px;
+       margin-top: -20px;
+       border: 0px  solid #;
+       border-radius: 0px 0px 0px 0px;
+       padding: 5px;
+       box-shadow: 0px 0px 0px #;}
+       
+       
+.box_hilfe {
+width: 1px;
+height: 1px;
+background-color: ;
+opacity: 0;
+z-index: 5;
+       position: fixed;
+       margin-left: -10px;
+       margin-top: -20px;
+       border: 0px  solid #;
+       border-radius: 0px 0px 0px 0px;
+       padding: 5px;
+       box-shadow: 0px 0px 0px #;}       
+       
+       
+.logo_oben {
+width: 1200px;
+height: 250px;
+background-color: ;
+opacity: 0,5;
+       position: relativ;
+       margin-left: 0px;
+       margin-top: 0px;
+       z-index: 3;
+       border: 0px  solid #;
+       border-radius: 0px 0px 0px 0px;
+       padding: 30px;
+       box-shadow: 0px 0px 0px #;}  
+       
+       
+       
+.box11 {
+width: 750px;
+height: 400px;
+background-color: #E8E8E8;
+       opacity: 0.75;
+       position: absolute;
+       margin-left: 20px;
+       margin-top: 0px;
+       border: 0px  solid #4A4A4A;
+       border-radius: 10px 10px 10px 10px;
+       padding: 5px;
+       box-shadow: 6px 6px 6px #4A4A4A;}       
+ 
+       
+.box1 {
+width: 300px;
+height: 150px;
+background-color: #E8E8E8;
+       opacity: 1;
+       position: relativ;
+       margin-top: 0px;
+       margin-left: 0px;
+       border: 0px  solid #4A4A4A;
+       border-radius: 10px 10px 10px 10px;
+       padding: 5px;
+       box-shadow: 6px 6px 6px #4A4A4A;}
+       
+       
+.boxindex {
+width: 200px;
+height: 100px;
+background-color: #E8E8E8;
+       opacity: 1;
+       position: relativ;
+       margin-top: 0px;
+       margin-left: 0px;
+       border: 0px  solid #4A4A4A;
+       border-radius: 10px 0px 10px 0px;
+       padding: 5px;
+       box-shadow: 6px 6px 6px #4A4A4A;}
+       
+       
+.linke_spalte {
+width: 735px;
+height: 100px;
+background-color: ;
+       opacity: 1;
+       position: relativ;
+       margin-top: 0px;
+       margin-left: 0px;
+       border: 0px  solid #4A4A4A;
+       border-radius: 0px 0px 0px 0px;
+       padding: 10px;
+       box-shadow: 0px 0px 0px #4A4A4A;}              
+       
+                                
+       
+
+</style> 
