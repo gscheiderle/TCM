@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+  <head>
+    <title>New Document</title>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+  </head>
+  <body>
+
+<script src="../script/oFbGeneral.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+function infoButton() {
+  var buttons = new Array();
+  var boxes = new Array();
+  var closes = new Array();
+  var stores = new Array();
+ 
+  function clickButton(evt) {
+    var sender = oFbGeneral.getSender(evt, this);
+    for (var i=0; i<buttons.length; i++) {
+      if (sender == buttons[i]) {
+        // Ausgewählte Box anzeigen
+        boxes[i].style.display = "";
+        if (stores[i]) {
+          stores[i].value = parseInt(stores[i].value) + 1;
+        }
+      } else {
+        // Alle anderen schließen
+        boxes[i].style.display = "none";
+      }
+    }
+  }
+ 
+  function clickClose(evt) {
+    var sender = oFbGeneral.getSender(evt, this);
+    var ix = -1;
+    for (var i=0; i<closes.length; i++) {
+      if (sender == closes[i]) {
+        ix = i;
+        break;
+      }
+    }
+    if (ix == -1) { return; }
+    boxes[ix].style.display = "none";
+  }
+ 
+  this.registerInfo = function(buttonID, boxID, closeID, storeID) {
+    var button = document.getElementById(buttonID);
+    var box = document.getElementById(boxID);
+    var close = document.getElementById(closeID);
+    var store = document.getElementById(storeID);
+    if (!button) { alert("Es gibt keinen Knopf mit der Kennung "+buttonID); return; }
+    if (!box) { alert("Es gibt keine Box mit der Kennung "+buttonID); return; }
+    if (closeID && !close) { alert("Es gibt keinen Knopf Kennung "+closeID); return; }
+    if (storeID && (!store || (store.nodeName != "INPUT"))) { alert("Es gibt kein Datenfeld mit der Kennung "+storeID); return; }
+    if (store && isNaN(parseInt(store.value))) {
+      store.value = 0;
+    }
+    buttons.push(button);
+    boxes.push(box);
+    closes.push(close);
+    stores.push(store);
+ 
+    // Initialisieren (Info ausblenden)
+    box.style.display = "none"; // Box ausblenden
+    box.style.position = "absolute";
+    box.style.zIndex = 999;
+    // Entweder fix auf der Seite platziert
+    // box.style.left = "50px";
+    // box.style.top = "100px";
+    // Oder ein definiertes Stückchen unter dem Knopf
+    box.style.marginTop = "10px";
+ 
+    // Knopf aktivieren
+    oFbGeneral.attachEvent(button, "click", clickButton);
+    oFbGeneral.attachEvent(close, "click", clickClose);
+  }
+}
+ 
+//-->
+</script>
+
+
+<!-- Knopf zum Anzeigen der Info -->
+<button type="button" id="infoButton1">Mehr Info</button>
+ 
+<!--Info-Box -->
+<div id="infoBox1" style="width: 400px; padding: 5px; background-color: white; border: 2px solid #CCCCCC">
+  Hier kommt die Zusatz-Info
+  <p style="text-align: center; margin-top: 20px">
+    <button type="button" id="infoClose1">Schließen</button>
+  </p>
+</div>
+
+<br><br>
+
+<!-- Knopf zum Anzeigen der Info -->
+<button type="button" id="infoButton">Mehr Info</button>
+ 
+<!--Info-Box -->
+<!-- <div id="infoBox" style="width: 400px; padding: 5px; background-color: white; border: 2px solid #CCCCCC">
+  Hier kommt die Zusatz-Info
+  <p style="text-align: center; margin-top: 20px">
+    <button type="button" id="infoClose">Schließen</button>
+  </p>
+</div> //-->
+
+
+<script type="text/javascript">
+<!--
+var info = new infoButton();
+ 
+// Die folgende Zeile für jeden Knopf wiederholen
+info.registerInfo("infoButton1", "infoBox1", "infoClose1");
+info.registerInfo("infoButton", "infoBox", "infoClose");
+//-->
+</script>
+    
+  </body>
+</html>
